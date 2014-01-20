@@ -40,5 +40,10 @@ describe GitHubLanguage do
       expect(calculate_favourite languages).to eq "Ruby, JavaScript"
     end
 
+    it 'can calculate a user\'s favourite language(s) given a username', :vcr do
+      user = "hamchapman"
+      expect(get_favourite_language_of user).to eq "Ruby"
+    end
+
   end
 end
