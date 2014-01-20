@@ -28,5 +28,13 @@ module LanguageHelper
     counter.each { |k, v| favourite_languages << k if v == counter.values.max }
     favourite_languages.join(", ")
   end
-  
+
+  def get_favourite_language_of user
+    uri = "https://api.github.com/users/#{user}/repos"
+    user_repos = get_repos uri
+    languages = get_array_of_languages user_repos
+    return "not able to be calculated" if languages.empty?
+    return calculate_favourite languages
+  end
+
 end

@@ -15,7 +15,7 @@ describe GitHubLanguage do
       expect(response.body).to include '"language":"Ruby"'
     end
 
-    it 'receives an error when an invlid username is provided', :vcr do
+    it 'receives an error when an invalid username is provided', :vcr do
       user = "hamchapman777"
       uri = "https://api.github.com/users/#{user}/repos"
       response = get_response_from(uri)
@@ -43,6 +43,10 @@ describe GitHubLanguage do
     it 'can calculate a user\'s favourite language(s) given a username', :vcr do
       user = "hamchapman"
       expect(get_favourite_language_of user).to eq "Ruby"
+    end
+
+    it 'returns an error message if the user has no repositories', :vcr do
+      expect(get_favourite_language_of "charles1").to eq "not able to be calculated"
     end
 
   end
