@@ -3,7 +3,7 @@ Given(/^I am on homepage$/) do
 end
 
 When(/^I enter "(.*?)" as the username$/) do |user|
-  fill_in "Username", with: user
+  fill_in :username, with: user
 end
 
 When(/^I click "(.*?)"$/) do |button_name|
