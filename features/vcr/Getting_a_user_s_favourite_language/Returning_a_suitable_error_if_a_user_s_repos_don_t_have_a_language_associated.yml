@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/users/barry/repos
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - api.github.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Mon, 20 Jan 2014 17:11:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '54'
+      X-Ratelimit-Reset:
+      - '1390240793'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Etag:
+      - '"f953d02e8fe261dffe9352a880d72d2a"'
+      Vary:
+      - Accept
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.beta
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-Github-Request-Id:
+      - 56BAF65E:2BC1:21E461:52DD58CB
+    body:
+      encoding: UTF-8
+      string: '[{"id":16007479,"name":"barrydevereux.github.io","full_name":"barry/barrydevereux.github.io","owner":{"login":"barry","id":35006,"avatar_url":"https://gravatar.com/avatar/c63a6cca85e62bb0b6e041a559c12344?d=https%3A%2F%2Fidenticons.github.com%2F3c3fc187d1ba149ee53962f7806ed483.png&r=x","gravatar_id":"c63a6cca85e62bb0b6e041a559c12344","url":"https://api.github.com/users/barry","html_url":"https://github.com/barry","followers_url":"https://api.github.com/users/barry/followers","following_url":"https://api.github.com/users/barry/following{/other_user}","gists_url":"https://api.github.com/users/barry/gists{/gist_id}","starred_url":"https://api.github.com/users/barry/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/barry/subscriptions","organizations_url":"https://api.github.com/users/barry/orgs","repos_url":"https://api.github.com/users/barry/repos","events_url":"https://api.github.com/users/barry/events{/privacy}","received_events_url":"https://api.github.com/users/barry/received_events","type":"User","site_admin":false},"private":false,"html_url":"https://github.com/barry/barrydevereux.github.io","description":"","fork":false,"url":"https://api.github.com/repos/barry/barrydevereux.github.io","forks_url":"https://api.github.com/repos/barry/barrydevereux.github.io/forks","keys_url":"https://api.github.com/repos/barry/barrydevereux.github.io/keys{/key_id}","collaborators_url":"https://api.github.com/repos/barry/barrydevereux.github.io/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/barry/barrydevereux.github.io/teams","hooks_url":"https://api.github.com/repos/barry/barrydevereux.github.io/hooks","issue_events_url":"https://api.github.com/repos/barry/barrydevereux.github.io/issues/events{/number}","events_url":"https://api.github.com/repos/barry/barrydevereux.github.io/events","assignees_url":"https://api.github.com/repos/barry/barrydevereux.github.io/assignees{/user}","branches_url":"https://api.github.com/repos/barry/barrydevereux.github.io/branches{/branch}","tags_url":"https://api.github.com/repos/barry/barrydevereux.github.io/tags","blobs_url":"https://api.github.com/repos/barry/barrydevereux.github.io/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/barry/barrydevereux.github.io/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/barry/barrydevereux.github.io/git/refs{/sha}","trees_url":"https://api.github.com/repos/barry/barrydevereux.github.io/git/trees{/sha}","statuses_url":"https://api.github.com/repos/barry/barrydevereux.github.io/statuses/{sha}","languages_url":"https://api.github.com/repos/barry/barrydevereux.github.io/languages","stargazers_url":"https://api.github.com/repos/barry/barrydevereux.github.io/stargazers","contributors_url":"https://api.github.com/repos/barry/barrydevereux.github.io/contributors","subscribers_url":"https://api.github.com/repos/barry/barrydevereux.github.io/subscribers","subscription_url":"https://api.github.com/repos/barry/barrydevereux.github.io/subscription","commits_url":"https://api.github.com/repos/barry/barrydevereux.github.io/commits{/sha}","git_commits_url":"https://api.github.com/repos/barry/barrydevereux.github.io/git/commits{/sha}","comments_url":"https://api.github.com/repos/barry/barrydevereux.github.io/comments{/number}","issue_comment_url":"https://api.github.com/repos/barry/barrydevereux.github.io/issues/comments/{number}","contents_url":"https://api.github.com/repos/barry/barrydevereux.github.io/contents/{+path}","compare_url":"https://api.github.com/repos/barry/barrydevereux.github.io/compare/{base}...{head}","merges_url":"https://api.github.com/repos/barry/barrydevereux.github.io/merges","archive_url":"https://api.github.com/repos/barry/barrydevereux.github.io/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/barry/barrydevereux.github.io/downloads","issues_url":"https://api.github.com/repos/barry/barrydevereux.github.io/issues{/number}","pulls_url":"https://api.github.com/repos/barry/barrydevereux.github.io/pulls{/number}","milestones_url":"https://api.github.com/repos/barry/barrydevereux.github.io/milestones{/number}","notifications_url":"https://api.github.com/repos/barry/barrydevereux.github.io/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/barry/barrydevereux.github.io/labels{/name}","releases_url":"https://api.github.com/repos/barry/barrydevereux.github.io/releases{/id}","created_at":"2014-01-17T18:07:44Z","updated_at":"2014-01-17T18:07:44Z","pushed_at":"2014-01-17T18:07:44Z","git_url":"git://github.com/barry/barrydevereux.github.io.git","ssh_url":"git@github.com:barry/barrydevereux.github.io.git","clone_url":"https://github.com/barry/barrydevereux.github.io.git","svn_url":"https://github.com/barry/barrydevereux.github.io","homepage":null,"size":0,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_downloads":true,"has_wiki":true,"forks_count":0,"mirror_url":null,"open_issues_count":0,"forks":0,"open_issues":0,"watchers":0,"default_branch":"master","master_branch":"master"}]'
+    http_version: 
+  recorded_at: Mon, 20 Jan 2014 17:11:39 GMT
+recorded_with: VCR 2.8.0

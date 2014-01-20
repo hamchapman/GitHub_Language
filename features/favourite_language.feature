@@ -9,4 +9,16 @@ Feature: Getting a user's favourite language
     And I click "Submit"
     Then I should see "Favourite language(s) of hamchapman: Ruby"
 
-  Scenario: 
+  @vcr
+  Scenario: Returning a suitable error if a user's repos don't have a language associated
+    Given I am on homepage
+    When I enter "barry" as the username 
+    And I click "Submit"
+    Then I should see "Favourite language(s) of barry: not able to be calculated"
+
+  @vcr
+  Scenario: Returning a suitable error if a user doesn't exist
+    Given I am on homepage
+    When I enter "hamchapman777" as the username 
+    And I click "Submit"
+    Then I should see "Favourite language(s) of hamchapman777: not available because the user does not exist"
