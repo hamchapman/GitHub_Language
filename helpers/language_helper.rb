@@ -32,6 +32,8 @@ module LanguageHelper
   def get_favourite_language_of user
     uri = "https://api.github.com/users/#{user}/repos"
     user_repos = get_repos uri
+    return "not available because the user does not exist" if !user_repos
+    
     languages = get_array_of_languages user_repos
     return "not able to be calculated" if languages.empty?
     return calculate_favourite languages
