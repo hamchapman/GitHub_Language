@@ -31,8 +31,13 @@ describe GitHubLanguage do
     end
 
     it 'can find a user\'s favourite language based on the number of times it occurs as a dominant language in a repo' do
-      languages = ["Ruby", "Ruby", "JavaScript", "Ruby", "Shell", "CSS", "Shell", "Ruby", "JavaScript", "Objective-C", "Ruby"]
+      languages = ["Ruby", "Ruby", "JavaScript", "Shell", "CSS", "Ruby", "JavaScript"]
       expect(calculate_favourite languages).to eq "Ruby"
+    end
+
+    it 'can find a user\'s favourite languages if two (or more) are equally frequently occurring' do
+      languages = ["Ruby", "Ruby", "JavaScript", "Shell", "JavaScript"]
+      expect(calculate_favourite languages).to eq "Ruby, JavaScript"
     end
 
   end
