@@ -23,5 +23,12 @@ describe GitHubLanguage do
       expect(response.message).to eq "Not Found"
     end
 
+    it 'can create an array of a user\'s used languages', :vcr do
+      user = "hamchapman"
+      uri = "https://api.github.com/users/#{user}/repos"
+      user_repos = get_repos uri
+      expect(get_array_of_languages user_repos ).to include("CSS", "JavaScript", "Objective-C", "Ruby", "Shell")
+    end
+
   end
 end
