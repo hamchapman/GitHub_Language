@@ -30,7 +30,7 @@ describe GitHubLanguage do
       expect(get_array_of_languages user_repos ).to include("CSS", "JavaScript", "Objective-C", "Ruby", "Shell")
     end
 
-    it 'can find a user\'s favourite language based on the number of times it occurs as a dominant language in a repo', do
+    it 'can find a user\'s favourite language based on the number of times it occurs as a dominant language in a repo' do
       languages = ["Ruby", "Ruby", "JavaScript", "Ruby", "Shell", "CSS", "Shell", "Ruby", "JavaScript", "Objective-C", "Ruby"]
       expect(calculate_favourite languages).to eq "Ruby"
     end
